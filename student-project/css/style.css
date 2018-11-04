@@ -1,0 +1,458 @@
+/*********************** Reset *********************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0 0 300px 0;
+}
+
+a, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/****************** S components ***************/
+/*********** S Nav **************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: 'Pacifico', cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ca137f;
+}
+
+nav .navigation a {
+  transition: all .2s ease;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+nav .navigation a:not(:last-of-type) {
+  padding: 0 .9rem 0 0;
+}
+
+nav .navigation a.active {
+  color: #ca137f;
+  font-weight: 600;
+}
+
+nav .navigation a:hover {
+  color: #ca137f;
+}
+
+/*********** E Nav **************/
+/******** S Header ********/
+.header {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.header .imgs {
+  height: 100%;
+}
+
+.header .imgs > div {
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.header .imgs > div.active {
+  display: block;
+}
+
+.header .imgs > div img {
+  width: 100%;
+}
+
+.header .imgs > div .header-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  color: #fff;
+}
+
+.header .imgs > div .header-content h2 {
+  font-size: 4rem;
+}
+
+.header .imgs > div .header-content p {
+  font-size: 1.8rem;
+  margin: 1rem 0 2rem;
+}
+
+.header .imgs > div .header-content a {
+  background-color: #ca137f;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.header i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  padding: .8rem .7rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #ca137f;
+  border-radius: 100px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.header i.header-right-icon {
+  right: 1rem;
+}
+
+.header i.header-left-icon {
+  left: 1rem;
+}
+
+.header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
+/******** E Header ********/
+/******** S Footer ********/
+footer {
+  background: #211f1f;
+  padding: 1.4rem 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .rights {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+footer .rights p {
+  font-size: 1.5rem;
+}
+
+footer .social a {
+  font-size: 1.7rem;
+  transition: all .2s ease;
+}
+
+footer .social a:hover {
+  color: #ca137f;
+}
+
+footer .social a:not(:last-of-type) {
+  margin-right: 1.2px;
+}
+
+/******** E Footer ********/
+/******** S Products ********/
+.products {
+  position: relative;
+  padding: 4rem 7rem;
+}
+
+.products .shape {
+  position: absolute;
+  top: 7rem;
+  right: 7rem;
+}
+
+.products .shape i {
+  color: #ff0000;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 0 2rem 0;
+}
+
+.products .categories {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products .categories .category {
+  width: 33%;
+}
+
+.products .categories .category .category-heading {
+  background: #ff0000;
+  padding: .8rem 0;
+}
+
+.products .categories .category .category-heading h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.products .categories .category .category-products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.products .categories .category .category-products a {
+  width: 32.6%;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 3px 1.5px #aaa;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 0 1rem 0;
+}
+
+.products .categories .category .category-products a.listing {
+  width: 100%;
+  height: 228px;
+}
+
+.products .categories .category .category-products a .product {
+  height: 100%;
+}
+
+.products .categories .category .category-products a .product-img {
+  height: 70%;
+  overflow: hidden;
+}
+
+.products .categories .category .category-products a .product-img.listing {
+  height: 85%;
+}
+
+.products .categories .category .category-products a .product-img img {
+  width: 100%;
+}
+
+.products .categories .category .category-products a h3 {
+  text-align: center;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .categories .category .category-products a h3.listing {
+  height: 15%;
+}
+
+.products .see-all {
+  background-color: #ca137f;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0 0;
+  display: inline-block;
+  color: #fff;
+}
+
+/******** E Products ********/
+/****************** E components ***************/
+/********************** S Product-info **************************/
+.product-info {
+  display: flex;
+  padding: 4rem 7rem;
+}
+
+.product-info .product-img {
+  position: relative;
+  width: 50%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.product-info .product-img img {
+  width: 100%;
+}
+
+.product-info .product-img button {
+  padding: 1rem;
+  border-radius: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  overflow: hidden;
+  background: none;
+}
+
+.product-info .product-img button:active {
+  bottom: 1.1rem;
+}
+
+.product-info .product-img button:hover i, .product-info .product-img button:hover span {
+  transform: translateX(0);
+}
+
+.product-info .product-img button i {
+  margin: 0 2px 0 0;
+  transform: translateX(-3rem);
+  transition: all .3s ease;
+}
+
+.product-info .product-img button span {
+  transition: all .3s ease;
+  transform: translateX(-1rem);
+}
+
+.product-info .product-img button:first-of-type {
+  border: 2px solid #ff0000;
+  left: 1rem;
+}
+
+.product-info .product-img button:last-of-type {
+  border: 2px solid #ca137f;
+  right: 1rem;
+}
+
+.product-info .product-details {
+  color: #053740;
+  padding: 0 0 0 3rem;
+  width: 50%;
+}
+
+.product-info .product-details .title {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info .product-details .title .line {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.2rem 0;
+}
+
+.product-info .product-details .title .line:nth-of-type(2) {
+  align-items: flex-start;
+}
+
+.product-info .product-details .title .line .the-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 1.8rem;
+  margin: 0 4px 0 0;
+}
+
+.product-info .product-details .title .line h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.product-info .product-details .title .line .description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.7rem;
+}
+
+.product-info .product-details .title .line .sizes {
+  padding: 0 0 0 5.3rem;
+}
+
+.product-info .product-details .title .line .sizes span {
+  box-shadow: 0 0 2px 1px #aaa;
+  background-color: #fff;
+  padding: .2rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.product-info .product-details .title .line .sizes span:not(:last-of-type) {
+  margin: 0 4px 0 0;
+}
+
+.product-info .product-details .title .line .sizes span.active {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.product-info .product-details .title .line .sizes .m {
+  padding: .4rem;
+}
+
+.product-info .product-details .title .line .sizes .l {
+  padding: .6rem .7rem;
+}
+
+.product-info .product-details .title .line .sizes .xl {
+  padding: .8rem;
+}
+
+.product-info .product-details .title .line .price {
+  font-size: 2rem;
+  padding: 0 0 0 5.3rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.product-info .product-details .title .line .availble {
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.product-info .product-details .title .line .availble::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: darkgreen;
+  box-shadow: 0 0 2px 4px green;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+}
+
+/********************** E Product-info **************************/
